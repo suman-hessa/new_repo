@@ -20,9 +20,10 @@ function displayDate (){
 }
 
 
-let timeOut = setInterval(displayDate, 2000);
+let timeOut = setTimeout(displayDate, 5000);
  console.log(timeOut);
  
  function stop(){
-    clearInterval(timeOut);
+    clearTimeout(timeOut);
+    console.log("The clear timeout function was executed");
  }
