@@ -55,13 +55,37 @@ let timeOut = setTimeout(displayDate, 5000);
 //     clearInterval(intv);
 // }
 
-let now = new Date();
-console.log(now);
 
-now.setDate(20);
-console.log(now);
+let greet = () =>{
+   console.log("Good morning and have a nice day. ");
+}
 
-now.setHours(5);
-console.log(now);
+greet();
 
- 
+let add = (a,b) =>{
+   return a +b ;
+}
+
+let ad = (a, b, c) => a+b+c;
+
+let factorial = a => {
+     let fact = 1;
+   for(let i =1;i<=a;i++){
+      fact *=i;
+   }
+   console.log(`The factorial of ${a} is ${fact}`);
+}
+
+let names = ["sohan", "mohan", "arpan", "nina"];
+
+let greetings = "good morning";
+let object1 ={
+    greetings : "Good night", 
+    names : ["suman", "Adarsh", "Badal", "Bhanu"], 
+     speak(){
+       this.names.forEach((students)=>{
+         console.log(this.greetings +" "+ students);
+       });
+       }
+     }
+     object1.speak();
