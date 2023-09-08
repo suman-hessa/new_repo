@@ -3,24 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New local repo to be pushed in the git</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Css grids</title>
+    <style>
+       #container{
+        height:600;
+        width:700;
+     display:grid;
+    grid-gap:0.1rem;
+    grid-template-areas:'navbar navbar navbar navbar'
+                         'sidebar main main main '
+                         'sidebar box4 box5 box6'
+                         'sidebar footer footer footer';
+                         grid-template-columns:repeat(4), 1fr;
+                         grid-template-rows:repeat(2), 1fr;
+        }
+        .item:nth-child(2n){
+            background-color:#087E8B;
+        }
+        .item:nth-child(2n+1){
+            background-color:rgb(160, 32, 215);
+        }
+        .item{
+            background-color:#BFD7EA;
+            padding:50px;
+            text-align:center;
+            color:white;
+        }
+        #navbar{
+            grid-area:navbar;
+        }
+        #sidebar{
+            grid-area:sidebar;
+        }
+        #main{
+            grid-area:main;
+        }
+        #box4{
+            grid-area:box4;
+        }
+        #box5{
+            grid-area:box5;
+        }
+        #box6{
+            grid-area:box6;
+        }
+        #footer{
+            grid-area:footer;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>New local repo to be pushed in the git</h1>
-    </header>
-    <span id="time"></span>
-    <br>
-    <button id ="btn" onclick="stop()">Stop time</button>
-    <p>This is feature 1 (button)</p>
-    <p>This is feature 1 (dropdown)</p>
-
-    <div class="clock">
-        <span id="time">
-            
-        </span>
+    <div id ="container">
+        <div id="navbar" class="item">NAVBAR</div>
+        <div id="sidebar" class="item">SIDEBAR</div>
+        <div id="main" class="item">MAIN</div>
+        <div id="box4" class="item">BOX1</div>
+        <div id="box5" class="item">BOX1</div>
+        <div id="box6" class="item">BOX1</div>
+        <div id="footer" class="item">FOOTER</div>
     </div>
-    <script src ="script.js"></script>
 </body>
 </html>
